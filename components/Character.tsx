@@ -3,11 +3,12 @@
 import { useState } from "react";
 import Image from "next/image";
 import ChatWindow from "./ChatWindow";
+import { useChatOpen } from "./ChatContext";
 
 const CLOSE_ANIMATION_MS = 300;
 
 export default function Character() {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, setIsOpen } = useChatOpen();
   const [closing, setClosing] = useState(false);
 
   function openChat() {

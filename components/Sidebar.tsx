@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { sections, sectionIndex } from "@/lib/sections";
+import { useChatOpen } from "./ChatContext";
 
 const NEXT_KEYS = ["ArrowDown", "ArrowRight"];
 const PREV_KEYS = ["ArrowUp", "ArrowLeft"];
@@ -25,6 +26,7 @@ export default function Sidebar() {
   const pathname = usePathname();
   const router = useRouter();
   const activeIndex = sectionIndex(pathname);
+  const { isOpen: isChatOpen } = useChatOpen();
 
   // Warm up every route so switching sections is instant (and so the
   // view transition can pair old and new content in the same commit).
@@ -37,6 +39,7 @@ export default function Sidebar() {
     function onKeyDown(event: KeyboardEvent) {
       if (event.metaKey || event.ctrlKey || event.altKey) return;
       if (isTyping(event.target)) return;
+      if (isChatOpen) return;
 
       const step = NEXT_KEYS.includes(event.key)
         ? 1
@@ -54,7 +57,7 @@ export default function Sidebar() {
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [activeIndex, router]);
+  }, [activeIndex, router, isChatOpen]);
 
   return (
     <nav className="frame-right" aria-label="Sections">
