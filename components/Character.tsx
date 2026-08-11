@@ -1,9 +1,12 @@
+"use client";
+
 import Image from "next/image";
 
 export default function Character() {
-    
+
 return(
     <div className="character-container">
+      <button className="character-btn" onClick={imagePressed}>
               <Image
                 src="/media/character.gif"
                 alt=""
@@ -13,6 +16,12 @@ return(
                 unoptimized
                 priority
               />
+      </button>
             </div>
 );
+
+function imagePressed(){
+  console.log("YEOUCHH")
+}
+
 }

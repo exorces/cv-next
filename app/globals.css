@@ -43,7 +43,8 @@ h2, .section-label, .stat-number, .jam-title, .jam-date, .prog-title,
   border: 1px solid var(--green);
 }
 
-.jam-card, .blend-item, .contact-item, .social-link, .prog-links a {
+.jam-card, .blend-item, .contact-item, .social-link, .prog-links a,
+.character-container {
   transition: all 0.3s;
 }
 
@@ -396,22 +397,23 @@ h1 {
 
 .frame-right {
   width: 150px;
-  flex-shrink: 0;
+  flex-shrink: 1;
   border-left: 1px solid var(--green);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 15px;
-  padding: 40px 20px;
+  padding: 15px 20px;
   position: relative;
 }
 
 /* Base state is the inactive state, so .inactive needs no rules of its own. */
 .swaying-box {
-  width: 80px;
-  height: 80px;
-  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  flex-shrink: 1;
+  min-height: 0;
   background: #000;
   transform-origin: center;
   transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease,
@@ -476,8 +478,25 @@ h1 {
   overflow: hidden;
   background: #000;
 }
+/* 
+.character-container {
+  width: 80px;
+  height: 100px;
+  left: 20px;
+  bottom: 20px;
+} */
 
-.character-container:hover { border-color: var(--green); background: var(--g05); }
+.character-container:hover { box-shadow: 0 0 10px var(--g60); }
+
+.character-btn {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
 
 .character {
   width: 100%;
@@ -583,7 +602,7 @@ h1 {
     border-left: none;
     border-top: 1px solid var(--green);
     flex-direction: row;
-    padding: 15px;
+    padding: 25px;
     gap: 10px;
   }
 
@@ -600,13 +619,6 @@ h1 {
   .about-content { flex-direction: column; align-items: flex-start; gap: 30px; }
 
   .language-list { width: 100%; }
-
-  .character-container {
-    width: 80px;
-    height: 100px;
-    left: 20px;
-    bottom: 20px;
-  }
 
   .content-section::-webkit-scrollbar { width: 6px; }
 }

@@ -200,8 +200,8 @@ export const contactItems: ContactItem[] = [
 
 export const socials: SocialLink[] = [
   { icon: "github", title: "GitHub", href: "#" },
-  { icon: "itch", title: "itch.io", href: "#" },
+  // { icon: "itch", title: "itch.io", href: "#" },
   { icon: "linkedin", title: "LinkedIn", href: "#" },
-  { icon: "instagram", title: "Instagram", href: "#" },
-  { icon: "x", title: "X", href: "#" },
+  // { icon: "instagram", title: "Instagram", href: "#" },
+  // { icon: "x", title: "X", href: "#" },
 ];

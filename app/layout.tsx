@@ -42,17 +42,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
         <Character />
 
-        <div className="character-container">
-          <Image
-            src="/media/character.gif"
-            alt=""
-            width={1000}
-            height={1000}
-            className="character"
-            unoptimized
-            priority
-          />
-        </div>
       </body>
     </html>
   );
