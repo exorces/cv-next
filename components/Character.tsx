@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import ChatWindow from "./ChatWindow";
 
-const CLOSE_ANIMATION_MS = 400;
+const CLOSE_ANIMATION_MS = 300;
 
 export default function Character() {
   const [isOpen, setIsOpen] = useState(false);

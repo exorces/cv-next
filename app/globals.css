@@ -519,16 +519,16 @@ h1 {
 
 .chat-window {
   position: relative;
-  width: min(480px, 90vw);
-  height: min(360px, 80vh);
+  width: min(450px, 90vw);
+  height: min(1050px, 90vh);
   background: #000;
   border: 1px solid var(--green);
   box-shadow: 0 0 20px var(--g40);
-  animation: chat-flicker-in 0.4s steps(1, end);
+  animation: chat-flicker-in 0.3s steps(1, end);
 }
 
 .chat-window.closing {
-  animation: chat-flicker-out 0.4s steps(1, end);
+  animation: chat-flicker-out 0.3s steps(1, end);
 }
 
 .chat-close {
