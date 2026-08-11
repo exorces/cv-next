@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Image from "next/image";
 import Sidebar from "@/components/Sidebar";
+import Character from "@/components/Character";
 import { EmailText } from "@/components/ObfuscatedEmail";
 import "./globals.css";
 
@@ -38,6 +39,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </div>
           <Sidebar />
         </main>
+
+        <Character />
 
         <div className="character-container">
           <Image
