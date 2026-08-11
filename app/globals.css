@@ -477,6 +477,8 @@ h1 {
   background: #000;
 }
 
+.character-container:hover { border-color: var(--green); background: var(--g05); }
+
 .character {
   width: 100%;
   height: 100%;

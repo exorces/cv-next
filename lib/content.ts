@@ -67,7 +67,7 @@ export const gameJams: GameJam[] = [
   {
     title: "Crisis Protocol",
     span: "large",
-    date: "LD52 - 2025",
+    date: "2025",
     image: {
       src: "/media/crisis-protocol.png",
       width: 1920,
@@ -80,7 +80,7 @@ export const gameJams: GameJam[] = [
   {
     title: "Magasin",
     span: "large",
-    date: "GMTK 2026",
+    date: "2026",
     image: {
       src: "/media/magasin.png",
       width: 347,
