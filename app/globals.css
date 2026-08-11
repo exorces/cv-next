@@ -505,6 +505,69 @@ h1 {
   image-rendering: pixelated;
 }
 
+/* ============================================================ chat window */
+
+.chat-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.chat-window {
+  position: relative;
+  width: min(480px, 90vw);
+  height: min(360px, 80vh);
+  background: #000;
+  border: 1px solid var(--green);
+  box-shadow: 0 0 20px var(--g40);
+  animation: chat-flicker-in 0.4s steps(1, end);
+}
+
+.chat-window.closing {
+  animation: chat-flicker-out 0.4s steps(1, end);
+}
+
+.chat-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--green);
+  background: none;
+  color: var(--green);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.chat-close:hover { background: var(--g20); }
+
+@keyframes chat-flicker-in {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  20% { opacity: 0; }
+  30% { opacity: 1; }
+  45% { opacity: 0.2; }
+  55% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes chat-flicker-out {
+  0% { opacity: 1; }
+  45% { opacity: 1; }
+  55% { opacity: 0.2; }
+  70% { opacity: 1; }
+  80% { opacity: 0; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 .scanlines, .noise { position: fixed; inset: 0; pointer-events: none; }
 
 .scanlines {
