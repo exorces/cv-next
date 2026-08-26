@@ -26,7 +26,7 @@ export default function AboutPage() {
         {languages.map((language) => (
           <div className="language-row" key={language.name}>
             <span className="language-name">{language.name}</span>
-            <span className="language-count">{language.count}</span>
+            {/* <span className="language-count">{language.count}</span> */}
           </div>
         ))}
       </div>
