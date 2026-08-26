@@ -39,11 +39,11 @@ export type LanguageProficiency = { name: string; count: number };
 
 export const about = {
   paragraphs: [
-    "I'm a Computer Science student that is interested in game development and 3D art. Alongside my studies, I've been building hands-on experience through personal projects and have participated in two game jams. I also create 3D models both for games and as a hobby.",
+    "I'm a Computer Science student that is interested in game development, 3D art and all things thats related to technology . Alongside my studies, I've been building hands-on experience through personal projects and have participated in two game jams so far. I also create 3D models as a hobby and like to expirement on computers whether it be on the hardware side or by coding/networking.",
   ],
   stats: [
     { number: "3+", label: "Years" },
-    { number: "20+", label: "Projects" },
+    { number: "100+", label: "Projects / Labs" },
     { number: "2", label: "GameJams" },
   ] satisfies Stat[],
 };
@@ -59,6 +59,9 @@ export const languages: LanguageProficiency[] = [
   { name: "C#", count: 1 },
   { name: "Kotlin", count: 1 },
   { name: "SQL", count: 1 },
+  { name: "BAT / Batch", count: 1 },
+  { name: "Python", count: 1 },
+  
 ];
 
 /* ---------------------------------------------------------------- games */
@@ -114,13 +117,6 @@ export const projects: Project[] = [
     lang: "T-SQL / SQL Server",
     description:
       "Clinic management database built from the schema up — triggers, stored procedures, user-defined functions, cursors and indexing strategy.",
-    links: [],
-  },
-  {
-    title: "Admin CRUD",
-    lang: "PHP / PDO / jQuery",
-    description:
-      "Six-entity administration app with prepared statements throughout and session-based authentication guarding every page.",
     links: [],
   },
   {
@@ -194,14 +190,14 @@ export const renders: Render[] = [];
  * <EmailLink> so the address never appears in the prerendered HTML.
  */
 export const contactItems: ContactItem[] = [
-  { label: "Location", value: "Digital Realm / Earth / Montreal (maybe)" },
-  { label: "Availability", value: "Please hire me" },
+  { label: "Location", value: "Digital Realm / Earth / Montreal" },
+  { label: "Availability", value: "Part-time" },
 ];
 
 export const socials: SocialLink[] = [
-  { icon: "github", title: "GitHub", href: "#" },
-  { icon: "itch", title: "itch.io", href: "#" },
-  { icon: "linkedin", title: "LinkedIn", href: "#" },
-  { icon: "instagram", title: "Instagram", href: "#" },
-  { icon: "x", title: "X", href: "#" },
+  { icon: "github", title: "GitHub", href: "https://github.com/exorces" },
+  // { icon: "itch", title: "itch.io", href: "#" },
+  { icon: "linkedin", title: "LinkedIn", href: "https://www.linkedin.com/in/kenliroux/" },
+  // { icon: "instagram", title: "Instagram", href: "#" },
+  // { icon: "x", title: "X", href: "#" },
 ];
