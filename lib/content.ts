@@ -39,7 +39,7 @@ export type LanguageProficiency = { name: string; count: number };
 
 export const about = {
   paragraphs: [
-    "I'm a Computer Science student that is interested in game development and 3D art. Alongside my studies, I've been building hands-on experience through personal projects and have participated in two game jams. I also create 3D models both for games and as a hobby.",
+    "I'm a Computer Science student that is interested in game development, 3D art and all things thats related to technology . Alongside my studies, I've been building hands-on experience through personal projects and have participated in two game jams so far. I also create 3D models as a hobby and like to expirement on computers whether it be on the hardware side or by coding/networking.",
   ],
   stats: [
     { number: "3+", label: "Years" },
